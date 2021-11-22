@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "isabelle-tito-wedding"
+    }
+  },
+  "defaultProject": "isabelle-tito-wedding",
+  "cli": {
+    "analytics": false
+  }
 }
