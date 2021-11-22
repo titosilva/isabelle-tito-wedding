@@ -5,4 +5,10 @@ p, h1, h2, h3, h4 {
 .nav-bar-container {
     position: fixed;
     top: 0;
+
+    width: 100vw;
+
+    .nav-bar-items {
+        max-width: 1200px;
+    }
 }
