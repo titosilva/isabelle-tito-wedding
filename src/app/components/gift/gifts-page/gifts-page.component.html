@@ -1,0 +1,34 @@
+<div class="d-flex flex-column align-items-center skip-nav-bar font-lobster-2 text-center pt-3 px-3">
+    <h1 class="font-big-icon">
+        <i class="fas fa-gifts"></i>
+    </h1>
+    <h3>
+        Deseja nos presentear?
+    </h3>
+    <p>
+        Começar uma nova vida traz muitas coisas boas e uma sensação maravilhosa de mudanças,
+        mas também traz novos desafios.
+    </p>
+    <p>Por isso, agradecemos imensamente qualquer ajuda!</p>
+    <h3>
+        <i class="fas fa-smile-beam"></i>
+        <i class="fas fa-heart"></i>
+    </h3>
+    <p>
+        Se você deseja nos ajudar, poderá consultar nossa lista de presentes abaixo. 
+        Se você preferir nos presentear com uma quantia que não está na lista
+        ou preferir nos transferir o dinheiro para comprarmos os presentes,
+        clique no botão "Utilizar Pix".
+    </p>
+    <div class="d-flex flex-row justify-content-center">
+        <button mat-stroked-button class="mx-3" (click)="showPixDialog()">
+            <mat-icon>pix</mat-icon>
+            <span class="mx-1">Utilizar Pix</span>
+        </button>
+    </div>
+
+    <div class="my-3">
+        <h1>Lista de presentes</h1>
+        <app-gifts-list></app-gifts-list>
+    </div>
+</div>

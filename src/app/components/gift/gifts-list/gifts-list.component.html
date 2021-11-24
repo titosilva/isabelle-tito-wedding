@@ -1,0 +1,10 @@
+<div class="d-flex flex-column justify-content-center">
+    <div class="d-flex flex-column justify-content-center align-items-center gift-container p-3 my-1"
+        *ngFor="let gift of gifts">
+        <img [src]="gift.imageUrl" class="w-75">
+        <div class="my-3">
+            <h2>{{ gift.name }}</h2>
+            <h3>R$ {{ gift.value }}</h3>
+        </div>
+    </div>
+</div>
