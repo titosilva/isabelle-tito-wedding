@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,20 @@ import { WeddingDateDisplayComponent } from './components/main-page/wedding-date
 import { GiftsPageComponent } from './components/gift/gifts-page/gifts-page.component';
 import { PixInfoDialogComponent } from './components/dialogs/pix-info-dialog/pix-info-dialog.component';
 import { GiftsListComponent } from './components/gift/gifts-list/gifts-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ThanksPageComponent } from './components/gift/thanks-page/thanks-page.component';
+import { ContactFormComponent } from './components/gift/contact-form/contact-form.component';
+import { PricePipe } from './pipes/price.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { ContactInfoDialogComponent } from './components/dialogs/contact-info-dialog/contact-info-dialog.component';
+
+const maskConfigFunction: () => Partial<IConfig> = () => {
+  return {
+    validation: false,
+  };
+};
+
 
 @NgModule({
   declarations: [
@@ -27,7 +44,11 @@ import { GiftsListComponent } from './components/gift/gifts-list/gifts-list.comp
     WeddingDateDisplayComponent,
     GiftsPageComponent,
     PixInfoDialogComponent,
-    GiftsListComponent
+    GiftsListComponent,
+    ThanksPageComponent,
+    ContactFormComponent,
+    PricePipe,
+    ContactInfoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +57,12 @@ import { GiftsListComponent } from './components/gift/gifts-list/gifts-list.comp
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [],
   bootstrap: [AppComponent]

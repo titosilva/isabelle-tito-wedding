@@ -10,15 +10,13 @@
 
     <span>
         <b>Chave pix: </b><br />
-        jt.nascimentosilva@hotmail.com
+        <p class="small">jt.nascimentosilva@hotmail.com</p>
     </span>
 
-    <button mat-flat-button color="accent" class="mt-3 w-75">
-        Fiz uma transferência
+    <button mat-flat-button color="accent" class="mt-3 w-75" (click)="goToThanks()">
+        Fiz uma transferência!
     </button>
     <button mat-stroked-button color="primary" class="mt-1 w-75" (click)="close()">
-        Cancelar
+        Sair
     </button>
-
-    <app-gifts-list></app-gifts-list>
 </div>

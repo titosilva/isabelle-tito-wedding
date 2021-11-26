@@ -1,0 +1,25 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<div class="d-flex flex-column align-items-center px-3" *ngIf="!loading">
+    <ng-container *ngIf="!submitted">
+        <h4>
+            Caso queira, escreva abaixo o seu nome e seu contato para que possamos te enviar uma mensagem!
+        </h4>
+    
+        <form [formGroup]="form" class="w-100 mt-3">
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Nome</mat-label>
+                <input matInput name="name" formControlName="name">
+                <mat-error>{{ getError('name') }}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Celular</mat-label>
+                <input matInput name="mobile" formControlName="mobile" mask="00000000000">
+                <mat-error>{{ getError('mobile') }}</mat-error>
+            </mat-form-field>
+            <button mat-flat-button color="accent" class="w-50" (click)="submit()">Enviar</button>
+        </form>
+    </ng-container>
+    <ng-container *ngIf="submitted">
+        <h4 class="text-info">Obrigado por deixar seu contato! Te enviaremos uma mensagem em breve!</h4>
+    </ng-container>
+</div>

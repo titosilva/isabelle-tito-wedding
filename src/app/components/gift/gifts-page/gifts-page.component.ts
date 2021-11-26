@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
+import { ContactInfoDialogComponent } from '../../dialogs/contact-info-dialog/contact-info-dialog.component';
 import { PixInfoDialogComponent } from '../../dialogs/pix-info-dialog/pix-info-dialog.component';
 
 @Component({
@@ -10,6 +12,7 @@ import { PixInfoDialogComponent } from '../../dialogs/pix-info-dialog/pix-info-d
 export class GiftsPageComponent implements OnInit {
 
   constructor(
+    public route: ActivatedRoute,
     private matDialog: MatDialog,
   ) { }
 
@@ -20,4 +23,7 @@ export class GiftsPageComponent implements OnInit {
     this.matDialog.open(PixInfoDialogComponent);
   }
 
+  showContactDialog() {
+    this.matDialog.open(ContactInfoDialogComponent);
+  }
 }
