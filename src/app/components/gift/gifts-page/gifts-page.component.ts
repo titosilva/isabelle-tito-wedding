@@ -24,6 +24,8 @@ export class GiftsPageComponent implements OnInit {
   }
 
   showContactDialog() {
-    this.matDialog.open(ContactInfoDialogComponent);
+    this.matDialog.open(ContactInfoDialogComponent, {
+      width: '85vw'
+    });
   }
 }

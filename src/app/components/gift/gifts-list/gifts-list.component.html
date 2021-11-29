@@ -10,8 +10,8 @@
         <div class="mt-3 w-100">
             <h2>{{ gift.name }}</h2>
             <p>{{ gift.value | price }}</p>
-            <button mat-flat-button color="accent" class="w-100">
-                Presentear
+            <button mat-flat-button color="accent" class="w-100" (click)="goToGiftDetails(gift.id)">
+                Ver detalhes
             </button>
         </div>
     </div>

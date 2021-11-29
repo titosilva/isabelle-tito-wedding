@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 .font-lobster-2 {
     font-family: 'Lobster Two', cursive;
+}
+
+.font-eb-garamond {
+    font-family: 'EB Garamond', serif;
+}
+
+@font-face {
+    font-family: 'NotoColorEmoji';
+    src: url("assets/NotoColorEmoji.ttf") format("truetype");
+}
+
+.font-noto-color-emoji {
+    font-family: 'NotoColorEmoji', sans-serif;
 }

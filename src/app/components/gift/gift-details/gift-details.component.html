@@ -1,0 +1,33 @@
+<mat-spinner *ngIf="loading" class="skip-nav-bar"></mat-spinner>
+<div *ngIf="!loading && !gift" class="skip-nav-bar">
+    <h1>Ocorreu um erro ao tentar ler as informações deste presente</h1>
+</div>
+<div *ngIf="!loading && gift" class="d-flex flex-column align-items-center font-eb-garamond skip-nav-bar">
+    <img *ngIf="gift.imageUrl" [src]="gift.imageUrl" class="w-50">
+
+    <h1><b>{{ gift.name }}</b></h1>
+    <h3>{{ gift.value | price }}</h3>
+    <p class="mx-3" *ngIf="gift.description">{{ gift.description }}</p>
+
+    <a *ngFor="let link of gift.links" [href]="link.url" target="_blank" class="my-1">
+        <button mat-flat-button color="accent" style="width: 75vw;">
+            <mat-icon>shopping_cart</mat-icon>
+            Comprar no site
+        </button>
+        <!-- <h4>{{ link.name }}</h4> -->
+    </a>
+
+    <button mat-flat-button color="accent" style="width: 75vw;" class="my-1" (click)="showPix()">
+        <mat-icon>pix</mat-icon>
+        Utilizar Pix
+    </button>
+
+    <button mat-flat-button color="accent" style="width: 75vw;" class="my-1" (click)="showContactInfo()">
+        <mat-icon>local_mall</mat-icon>
+        Entregar presencialmente
+    </button>
+
+    <!-- <mat-divider style="width: 70vw;" class="my-3"></mat-divider>
+    <div class="d-flex flex-column text-center" *ngIf="gift.links && gift.links.length > 0">
+    </div> -->
+</div>

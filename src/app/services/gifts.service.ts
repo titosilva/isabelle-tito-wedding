@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GiftModel } from '../models/gift';
+import { GiftDetailedModel, GiftModel } from '../models/gift';
 import { environment } from '../../environments/environment';
 import { ApiResponse } from '../models/api-response';
 
@@ -20,5 +20,9 @@ export class GiftsService {
     return this.http.get<ApiResponse<GiftModel[]>>(`${environment.api.server}/${apiRoute}`, {
       params: { 'O': offset.toFixed(0), 'Q': quantity.toFixed(0)}
     });
+  }
+
+  getGift(id: string): Observable<ApiResponse<GiftDetailedModel>> {
+    return this.http.get<ApiResponse<GiftDetailedModel>>(`${environment.api.server}/${apiRoute}/${id}`);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GiftModel } from 'src/app/models/gift';
 import { GiftsService as GiftService } from 'src/app/services/gifts.service';
 
@@ -15,6 +16,7 @@ export class GiftsListComponent implements OnInit {
 
   constructor(
     private giftService: GiftService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -26,4 +28,7 @@ export class GiftsListComponent implements OnInit {
     )
   }
 
+  goToGiftDetails(id: string) {
+    this.router.navigate(['gifts', 'details', id])
+  }
 }

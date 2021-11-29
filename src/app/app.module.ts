@@ -7,6 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import { PricePipe } from './pipes/price.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ContactInfoDialogComponent } from './components/dialogs/contact-info-dialog/contact-info-dialog.component';
+import { GiftDetailsComponent } from './components/gift/gift-details/gift-details.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -48,7 +50,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ThanksPageComponent,
     ContactFormComponent,
     PricePipe,
-    ContactInfoDialogComponent
+    ContactInfoDialogComponent,
+    GiftDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     MatFormFieldModule,
     MatInputModule,
     NgxMaskModule.forRoot(maskConfigFunction),
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
