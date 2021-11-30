@@ -10,9 +10,13 @@ import { GiftsService as GiftService } from 'src/app/services/gifts.service';
 })
 export class GiftsListComponent implements OnInit {
 
-  gifts: GiftModel[];
+  gifts: GiftModel[] = [];
   loading: boolean = true;
   failed: boolean = false;
+
+  offset: number = 0;
+  quantity: number = 10;
+  anyElementsRemaining: boolean = true;
 
   constructor(
     private giftService: GiftService,
@@ -20,15 +24,29 @@ export class GiftsListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.loading = true;
-
-    this.giftService.listGifts(0, 5).subscribe(
-      res => { this.gifts = res.data; this.loading = false; },
-      err => { this.failed = true; this.loading = false; },
-    )
+    this.loadMoreGifts();
   }
 
   goToGiftDetails(id: string) {
-    this.router.navigate(['gifts', 'details', id])
+    this.router.navigate(['gifts', 'details', id]);
+  }
+
+  loadMoreGifts() {
+    this.loading = true;
+
+    this.giftService.listGifts(this.offset, this.quantity).subscribe(
+      res => { 
+        
+        this.gifts = this.gifts.concat(res.data);
+        this.offset += this.quantity;
+
+        if (res?.data?.length < this.quantity) {
+          this.anyElementsRemaining = false;
+        }
+        
+        this.loading = false; 
+      },
+      err => { this.failed = true; this.loading = false; },
+    )
   }
 }

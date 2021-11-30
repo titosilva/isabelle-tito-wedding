@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GiftDetailedModel, GiftModel } from 'src/app/models/gift';
 import { MatDialog } from '@angular/material/dialog';
 import { GiftsService } from 'src/app/services/gifts.service';
@@ -21,6 +21,7 @@ export class GiftDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private giftService: GiftsService,
     private matDialog: MatDialog,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -46,5 +47,9 @@ export class GiftDetailsComponent implements OnInit {
 
   showPix() {
     this.matDialog.open(PixInfoDialogComponent);
+  }
+
+  goBackToGifts() {
+    this.router.navigate(['gifts']);
   }
 }

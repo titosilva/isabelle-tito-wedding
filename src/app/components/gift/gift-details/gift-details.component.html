@@ -2,32 +2,32 @@
 <div *ngIf="!loading && !gift" class="skip-nav-bar">
     <h1>Ocorreu um erro ao tentar ler as informações deste presente</h1>
 </div>
-<div *ngIf="!loading && gift" class="d-flex flex-column align-items-center font-eb-garamond skip-nav-bar">
+<div *ngIf="!loading && gift" class="d-flex flex-column align-items-center font-eb-garamond skip-nav-bar" style="width: 100vw;">
     <img *ngIf="gift.imageUrl" [src]="gift.imageUrl" class="w-50">
 
     <h1><b>{{ gift.name }}</b></h1>
     <h3>{{ gift.value | price }}</h3>
     <p class="mx-3" *ngIf="gift.description">{{ gift.description }}</p>
 
-    <a *ngFor="let link of gift.links" [href]="link.url" target="_blank" class="my-1">
-        <button mat-flat-button color="accent" style="width: 75vw;">
+    <a *ngFor="let link of gift.links" [href]="link.url" target="_blank" class="my-1 w-75">
+        <button mat-flat-button color="accent" class="w-100">
             <mat-icon>shopping_cart</mat-icon>
             Comprar no site
         </button>
-        <!-- <h4>{{ link.name }}</h4> -->
     </a>
 
-    <button mat-flat-button color="accent" style="width: 75vw;" class="my-1" (click)="showPix()">
+    <button mat-flat-button color="accent" class="my-1 w-75" (click)="showPix()">
         <mat-icon>pix</mat-icon>
         Utilizar Pix
     </button>
 
-    <button mat-flat-button color="accent" style="width: 75vw;" class="my-1" (click)="showContactInfo()">
+    <button mat-flat-button color="accent" class="my-1 w-75" (click)="showContactInfo()">
         <mat-icon>local_mall</mat-icon>
         Entregar presencialmente
     </button>
 
-    <!-- <mat-divider style="width: 70vw;" class="my-3"></mat-divider>
-    <div class="d-flex flex-column text-center" *ngIf="gift.links && gift.links.length > 0">
-    </div> -->
+    <button mat-stroked-button  class="my-1 w-75" (click)="goBackToGifts()">
+        <mat-icon>arrow_back</mat-icon>
+        Retornar para a lista
+    </button>
 </div>

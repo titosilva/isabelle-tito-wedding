@@ -22,10 +22,10 @@
         </button>
     </a>
     <mat-divider class="my-3 w-100"></mat-divider>
-    <button mat-flat-button color="accent" (click)="goToThanks()" *ngIf="data?.description">
+    <button mat-flat-button color="accent" (click)="goToThanks()" *ngIf="data?.description" class="mb-1 w-50">
         Beleza!
     </button>
-    <button mat-flat-button color="accent" (click)="close()" *ngIf="!data?.description">
+    <button mat-stroked-button (click)="close()" class="w-50">
         Sair
     </button>
 </div>
