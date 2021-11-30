@@ -1,0 +1,22 @@
+<div mat-dialog-title class="d-flex align-items-center justify-content-center my-0">
+    <span class="d-flex align-items-center justify-content-center mx-1">
+        <mat-icon>pix</mat-icon>
+    </span>
+    <span>Pix - João Tito</span>
+</div>
+<div mat-dialog-content class="d-flex flex-column align-items-center text-center">
+    <span>QR Code</span>
+    <img src="assets/pix-qr-code.png" class="w-75">
+
+    <span>
+        <b>Chave pix: </b><br />
+        <p class="small">jt.nascimentosilva@hotmail.com</p>
+    </span>
+
+    <button mat-flat-button color="accent" class="mt-3 w-75" (click)="goToThanks()">
+        Fiz uma transferência!
+    </button>
+    <button mat-stroked-button class="mt-1 w-75" (click)="close()">
+        Sair
+    </button>
+</div>

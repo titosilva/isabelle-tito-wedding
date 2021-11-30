@@ -1,0 +1,31 @@
+<div mat-dialog-title class="d-flex align-items-center justify-content-center my-0">
+    <span class="d-flex align-items-center justify-content-center mx-1">
+        <mat-icon>phone_android</mat-icon>
+    </span>
+    <span>Contatos</span>
+</div>
+<div mat-dialog-content class="d-flex flex-column align-items-center text-center mt-3">
+    <p *ngIf="data?.description" class="mb-3">{{ data.description }}</p>
+
+    <h3><b>João Tito</b></h3>
+    <a href="https://api.whatsapp.com/send?phone=5561995490575" class="w-75">
+        <button mat-flat-button color="accent" class="w-100">
+            <mat-icon>whatsapp</mat-icon>
+            (61) 9 9549-0575
+        </button>
+    </a>
+    <h3 class="mt-3"><b>Isabelle</b></h3>
+    <a href="https://api.whatsapp.com/send?phone=5564999585946" class="w-75">
+        <button mat-flat-button color="accent" class="w-100">
+            <mat-icon>whatsapp</mat-icon>
+            (64) 9 9958-5946
+        </button>
+    </a>
+    <mat-divider class="my-3 w-100"></mat-divider>
+    <button mat-flat-button color="accent" (click)="goToThanks()" *ngIf="data?.description" class="mb-1 w-50">
+        Beleza!
+    </button>
+    <button mat-stroked-button (click)="close()" class="w-50">
+        Sair
+    </button>
+</div>

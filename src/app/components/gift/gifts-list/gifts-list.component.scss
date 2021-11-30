@@ -1,0 +1,13 @@
+.gift-container {
+    // border: 1px solid;
+    // border-radius: 5px;
+
+    max-width: 500px;
+    height: 200px;
+
+    img {
+        width: 75%;
+        height: 40%;
+        object-fit: cover;
+    }
+}

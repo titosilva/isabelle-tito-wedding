@@ -1,0 +1,44 @@
+<ng-container *ngIf="route.children.length === 0">
+    <div class="d-flex flex-column align-items-center skip-nav-bar font-lobster-2 text-center pt-3 px-3">
+        <h1 class="font-big-icon mat-primary-text">
+            <i class="fas fa-gifts"></i>
+        </h1>
+        <h3>
+            Deseja nos presentear?
+        </h3>
+        <p>
+            Começar uma nova vida traz muitas coisas boas e uma sensação maravilhosa de mudanças,
+            mas também traz novos desafios.
+        </p>
+        <p>Por isso, agradecemos muito o seu presente!</p>
+        <h1 class="font-noto-color-emoji force-primary-shadow">
+            💕
+        </h1>
+        <p>
+            Se você deseja nos dar algo, por favor, consulte a nossa lista de presentes abaixo.
+            Se você preferir nos dar uma quantia ou transferir o 
+            dinheiro para comprarmos os presentes, clique no botão "Utilizar Pix". 
+            Caso queira nos contatar, clique no botão "Ver contatos dos noivos".
+        </p>
+        <p class="small mat-primary-text">
+            (Por razões de segurança, não colocaremos nossos endereços neste site).
+        </p>
+
+        <div class="d-flex flex-column align-items-center">
+            <button mat-stroked-button class="mx-3 my-1 w-100" (click)="showPixDialog()">
+                <mat-icon>pix</mat-icon>
+                <span class="mx-1">Utilizar Pix</span>
+            </button>
+            <button mat-stroked-button class="mx-3 my-1 w-100" (click)="showContactDialog()">
+                <mat-icon>phone_android</mat-icon>
+                <span class="mx-1">Ver contatos dos noivos</span>
+            </button>
+        </div>
+
+        <div class="d-flex flex-column align-items-center mt-5">
+            <h1>Lista de presentes</h1>
+            <app-gifts-list></app-gifts-list>
+        </div>
+    </div>
+</ng-container>
+<router-outlet></router-outlet>

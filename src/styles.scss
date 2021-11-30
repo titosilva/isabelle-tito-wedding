@@ -1,7 +1,8 @@
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+// @import '~@angular/material/theming';
+@import './theme.scss';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -9,28 +10,67 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$isabelle-tito-wedding-primary: mat-palette($mat-indigo);
-$isabelle-tito-wedding-accent: mat-palette($mat-pink, A200, A100, A400);
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $isabelle-tito-wedding-primary: mat-palette($mat-indigo);
+// $isabelle-tito-wedding-accent: mat-palette($mat-pink, A200, A100, A400);
 
-// The warn palette is optional (defaults to red).
-$isabelle-tito-wedding-warn: mat-palette($mat-red);
+// // The warn palette is optional (defaults to red).
+// $isabelle-tito-wedding-warn: mat-palette($mat-red);
 
-// Create the theme object (a Sass map containing all of the palettes).
-$isabelle-tito-wedding-theme: mat-light-theme($isabelle-tito-wedding-primary, $isabelle-tito-wedding-accent, $isabelle-tito-wedding-warn);
+// // Create the theme object (a Sass map containing all of the palettes).
+// $isabelle-tito-wedding-theme: mat-light-theme($isabelle-tito-wedding-primary, $isabelle-tito-wedding-accent, $isabelle-tito-wedding-warn);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($isabelle-tito-wedding-theme);
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($isabelle-tito-wedding-theme);
+
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $isabelle-tito-wedding-primary: mat-palette($mat-indigo);
+// $isabelle-tito-wedding-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// $isabelle-tito-wedding-warn: mat-palette($mat-red);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+// $isabelle-tito-wedding-theme: mat-light-theme($isabelle-tito-wedding-primary, $isabelle-tito-wedding-accent, $isabelle-tito-wedding-warn);
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($isabelle-tito-wedding-theme);
+
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; width: 100vw;}
+* { margin: 0; padding: 0; }
+html, body { width: 100vw !important; color: $dark-text }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-primary-text {
+    color: map-get($mat-primary, main);
+}
+
+.mat-accent-text {
+    color: map-get($mat-accent, main);
+}
+
+.force-accent-shadow {
+    color: transparent;
+    text-shadow: 0 0 0 map-get($mat-accent, main);
+}
+
+.force-primary-shadow {
+    color: transparent;
+    text-shadow: 0 0 0 map-get($mat-primary, main);
+}
 
 @import url('./fonts.scss');
 @import url('./box-shadow.scss');
 @import url('./texts.scss');
+@import url('./generics.scss');
