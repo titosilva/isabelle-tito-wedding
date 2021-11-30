@@ -17,6 +17,7 @@ export class NavBarComponent implements OnInit {
   lastScroll: number = null;
   scrollBoundary: number = 2;
   hidden: boolean = false;
+  showingNavMenu: boolean = false;
 
   constructor() { }
 
@@ -52,4 +53,11 @@ export class NavBarComponent implements OnInit {
     this.navContainer.nativeElement.classList.add('hide');
   }
 
+  showNavMenu() {
+    this.showingNavMenu = true;
+  }
+
+  onCloseNavMenu() {
+    this.showingNavMenu = false;
+  }
 }

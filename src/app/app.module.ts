@@ -28,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ContactInfoDialogComponent } from './components/dialogs/contact-info-dialog/contact-info-dialog.component';
 import { GiftDetailsComponent } from './components/gift/gift-details/gift-details.component';
+import { NavMenuComponent } from './components/layout/nav-menu/nav-menu.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -51,7 +52,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ContactFormComponent,
     PricePipe,
     ContactInfoDialogComponent,
-    GiftDetailsComponent
+    GiftDetailsComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,

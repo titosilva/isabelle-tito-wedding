@@ -8,14 +8,19 @@
             Tito
         </h1>
     </a>
-    <h2 class="d-flex flex-row align-items-center m-0">
-        <div class="d-flex justify-content-center align-items-center mx-1">
-            <i class="fas fa-bars"></i>
-        </div>
-    </h2>
+    <a [routerLink]="" (click)="showNavMenu()" class="no-text-decoration">
+        <h2 class="d-flex flex-row align-items-center m-0">
+            <div class="d-flex justify-content-center align-items-center mx-1">
+                <i class="fas fa-bars"></i>
+            </div>
+        </h2>
+    </a>
 </div>
 
-<div class="nav-bar-container d-none d-md-flex flex-row justify-content-around align-items-center">
+<app-nav-menu *ngIf="showingNavMenu" (close)="onCloseNavMenu()">
+</app-nav-menu>
+
+<!-- <div class="nav-bar-container d-none d-md-flex flex-row justify-content-around align-items-center">
     <div class="nav-bar-items d-flex flex-row justify-content-around align-items-center p-2 px-3 w-100 font-lobster-2">
         <div class="d-flex flex-row align-items-center justify-content-around col-4 px-3">
             <h4>Nossa história</h4>
@@ -33,4 +38,4 @@
             <h4>Fotos</h4>
         </div>
     </div>
-</div>
+</div> -->
