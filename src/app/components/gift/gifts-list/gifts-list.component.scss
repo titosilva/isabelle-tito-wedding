@@ -3,11 +3,11 @@
     // border-radius: 5px;
 
     max-width: 500px;
-    height: 200px;
+    height: 250px;
 
     img {
-        width: 75%;
-        height: 40%;
+        max-width: 85%;
+        max-height: 50%;
         object-fit: cover;
     }
 }
