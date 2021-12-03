@@ -1,19 +1,18 @@
-<mat-spinner *ngIf="loading" class="my-5"></mat-spinner>
 <p *ngIf="failed" class="mt-3">
     Ocorreu uma falha ao tentar obter a lista de presentes
     <i class="fas fa-sad-tear"></i>
 </p>
-<div class="d-flex flex-row flex-wrap" *ngIf="!loading && !failed">
-    <div class="d-flex flex-column justify-content-end align-items-center gift-container p-3 col-6 col-md-3"
-        *ngFor="let gift of gifts">
-        <h1 *ngIf="!gift.imageUrl">
-            <i class="fas fa-gift"></i>
-        </h1>
-        <img [src]="gift.imageUrl" *ngIf="gift.imageUrl">
-        <div class="w-100 align-self-center">
-            <h3 class="text-center">{{ gift.name }}</h3>
-            <p>{{ gift.value | price }}</p>
-        </div>
+<div class="d-flex flex-row flex-wrap" *ngIf="!failed && gifts?.length > 0">
+    <div class="d-flex flex-column justify-content-end align-items-center gift-container p-3 col-6 col-md-3 my-1"
+    *ngFor="let gift of gifts">
+    <h1 *ngIf="!gift.imageUrl">
+        <i class="fas fa-gift"></i>
+    </h1>
+    <img [src]="gift.imageUrl" *ngIf="gift.imageUrl">
+    <div class="w-100 align-self-center">
+        <h3 class="text-center">{{ gift.name }}</h3>
+        <p>{{ gift.value | price }}</p>
+    </div>
         <button mat-flat-button color="accent" class="w-100" (click)="goToGiftDetails(gift.id)">
             Presentear
         </button>
@@ -29,3 +28,6 @@
         Fim da lista
     </h3>
 </ng-container>
+<div class="d-flex flex-row justify-content-center align-items-center w-100" *ngIf="loading" >
+    <mat-spinner class="my-5"></mat-spinner>
+</div>
