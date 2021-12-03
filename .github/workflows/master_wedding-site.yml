@@ -27,7 +27,7 @@ jobs:
           npm run build-prod --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./dist/isabelle-tito-wedding/* -r
+        run: zip -r -D release.zip ./dist/isabelle-tito-wedding/*
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
