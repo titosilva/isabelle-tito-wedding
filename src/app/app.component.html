@@ -1,4 +1,15 @@
-<div class="d-flex flex-row justify-content-center m-0 p-0">
+<div class="d-flex d-md-none flex-row justify-content-center m-0 p-0">
     <app-nav-bar></app-nav-bar>
     <router-outlet></router-outlet>
+</div>
+<div class="d-none d-md-flex flex-column justify-content-center align-items-center responsiveness-error font-lobster-2">
+    <h1 class="text-center">
+        Por favor, acesse de um celular
+        <mat-icon>
+            phone_android
+        </mat-icon>
+    </h1>
+    <h3 class="my-3">
+        Desculpe o transtorno. Estamos trabalhando nisto!
+    </h3>
 </div>
