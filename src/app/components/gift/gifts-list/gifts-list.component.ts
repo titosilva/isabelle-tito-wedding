@@ -15,7 +15,7 @@ export class GiftsListComponent implements OnInit {
   failed: boolean = false;
 
   offset: number = 0;
-  quantity: number = 10;
+  quantity: number = 12;
   anyElementsRemaining: boolean = true;
 
   constructor(

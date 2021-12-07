@@ -1,4 +1,5 @@
-<div class="nav-bar-container d-flex d-md-none flex-row justify-content-between align-items-center p-2 px-3 font-lobster-2 bg-white black-box-shadow" #navContainer>
+<div class="nav-bar-container d-flex d-md-none flex-row justify-content-between align-items-center p-2 px-3 font-lobster-2 bg-white black-box-shadow"
+    #navContainer>
     <a href="/" class="no-text-decoration">
         <h1 class="d-flex flex-row align-items-center m-0">
             Isabelle
@@ -20,22 +21,19 @@
 <app-nav-menu *ngIf="showingNavMenu" (close)="onCloseNavMenu()">
 </app-nav-menu>
 
-<!-- <div class="nav-bar-container d-none d-md-flex flex-row justify-content-around align-items-center">
+<div
+    class="nav-bar-container d-none d-md-flex flex-row justify-content-center align-items-center p-2 px-3 font-lobster-2 bg-white black-box-shadow">
     <div class="nav-bar-items d-flex flex-row justify-content-around align-items-center p-2 px-3 w-100 font-lobster-2">
-        <div class="d-flex flex-row align-items-center justify-content-around col-4 px-3">
-            <h4>Nossa história</h4>
-            <h4>Padrinhos</h4>
-        </div>
-        <h1 class="d-flex flex-row justify-content-center text-center m-0 col-2">
-            Isabelle
-            <div class="d-flex justify-content-center align-items-center mx-1">
+        <a routerLink="/" class="no-text-decoration d-flex flex-row justify-content-start m-0 col-4">
+            <h1 class="w-100">
+                Isabelle
                 <mat-icon>favorite</mat-icon>
-            </div>
-            Tito
-        </h1>
-        <div class="d-flex flex-row align-items-center justify-content-around col-4 px-3">
-            <h4>Lista de presentes</h4>
+                Tito
+            </h1>
+        </a>
+        <div class="d-flex flex-row justify-content-around col-8">
             <h4>Fotos</h4>
+            <h4>Lista de presentes</h4>
         </div>
     </div>
-</div> -->
+</div>
