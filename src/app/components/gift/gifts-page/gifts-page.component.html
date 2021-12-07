@@ -1,27 +1,38 @@
 <ng-container *ngIf="route.children.length === 0">
-    <div class="d-flex flex-column align-items-center skip-nav-bar font-lobster-2 text-center pt-3 px-3">
-        <h1 class="font-big-icon mat-primary-text">
-            <i class="fas fa-gifts"></i>
-        </h1>
-        <h3>
-            Deseja nos presentear?
-        </h3>
-        <p>
-            Começar uma nova vida traz muitas coisas boas e uma sensação maravilhosa de mudanças,
-            mas também traz novos desafios.
-        </p>
-        <p>Por isso, agradecemos muito o seu presente!</p>
-        <h1 class="font-noto-color-emoji force-primary-shadow">
-            💕
-        </h1>
+    <div class="d-flex flex-column align-items-center font-lobster-2 text-center pt-3 px-3 skip-nav-bar gifts-page-container">
+        <div class="d-flex flex-column flex-md-row">
+            <h1 class="d-block d-md-none font-big-icon mat-primary-text col-md-6">
+                <i class="fas fa-gifts"></i>
+            </h1>
+            <div class="d-none d-md-flex mat-primary-text justify-content-center align-items-center col-md-6">
+                <h1 class="font-big-icon-desktop">
+                    <i class="fas fa-gifts"></i>
+                </h1>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center col-md-6">
+                <h3>
+                    Deseja nos presentear?
+                </h3>
+                <p>
+                    Começar uma nova vida traz muitas coisas boas e uma sensação maravilhosa de mudanças,
+                    mas também traz novos desafios.
+                </p>
+                <p>Por isso, agradecemos muito o seu presente!</p>
+                <h1 class="font-noto-color-emoji force-primary-shadow">
+                    💕
+                </h1>
+            </div>
+        </div>
         <p>
             Se você deseja nos dar algo, por favor, consulte a nossa lista de presentes abaixo.
             Se você preferir nos dar uma quantia ou transferir o 
             dinheiro para comprarmos os presentes, clique no botão "Utilizar Pix". 
+        </p>
+        <p>
             Caso queira nos contatar, clique no botão "Ver contatos dos noivos".
         </p>
         <p class="small mat-primary-text">
-            (Por razões de segurança, não colocaremos nossos endereços neste site).
+            (Por motivo de segurança, não colocaremos nossos endereços neste site).
         </p>
 
         <div class="d-flex flex-column align-items-center">
@@ -36,7 +47,7 @@
         </div>
 
         <div class="d-flex flex-column align-items-center mt-5 w-100">
-            <h1>Lista de presentes</h1>
+            <h1 class="mb-5">Lista de presentes</h1>
             <app-gifts-list class="w-100"></app-gifts-list>
         </div>
     </div>
