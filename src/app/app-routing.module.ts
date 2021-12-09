@@ -4,6 +4,7 @@ import { GiftDetailsComponent } from './components/gift/gift-details/gift-detail
 import { GiftsPageComponent } from './components/gift/gifts-page/gifts-page.component';
 import { ThanksPageComponent } from './components/gift/thanks-page/thanks-page.component';
 import { MainPageComponent } from './components/main-page/main-page/main-page.component';
+import { PhotosPageComponent } from './components/photos/photos-page/photos-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -15,6 +16,10 @@ const routes: Routes = [
       { path: 'details/:id', component: GiftDetailsComponent },
     ]
   },
+  {
+    path: 'photos',
+    component: PhotosPageComponent
+  }
 ];
 
 @NgModule({
