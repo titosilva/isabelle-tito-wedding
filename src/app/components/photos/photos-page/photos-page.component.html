@@ -1,0 +1,9 @@
+<div class="d-flex flex-column align-items-center page-container font-lobster-2 skip-nav-bar">
+    <h1 class="display-4">Nossas fotos</h1>
+    <div class=" d-flex flex-row flex-wrap w-100">
+        <div *ngFor="let idx of photoNumbers"
+             class="d-flex justify-content-center align-items-center col-6 col-md-3 photo-container my-3">
+            <img [src]="'assets/photos/photo'+ idx +'.jfif'">
+        </div>
+    </div>
+</div>

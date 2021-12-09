@@ -29,6 +29,7 @@ import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { ContactInfoDialogComponent } from './components/dialogs/contact-info-dialog/contact-info-dialog.component';
 import { GiftDetailsComponent } from './components/gift/gift-details/gift-details.component';
 import { NavMenuComponent } from './components/layout/nav-menu/nav-menu.component';
+import { PhotosPageComponent } from './components/photos/photos-page/photos-page.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -53,7 +54,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     PricePipe,
     ContactInfoDialogComponent,
     GiftDetailsComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    PhotosPageComponent
   ],
   imports: [
     BrowserModule,
