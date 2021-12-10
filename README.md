@@ -1,27 +1,16 @@
-# IsabelleTitoWedding
+# Isabelle and Tito are getting married!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
+Hi! My name is Tito, I'm a developer very passionate for coding but much more passionate for a girl called Isabelle ❤️
+And now, we're getting married! 💍 I developed this simple site to help us to announce our wedding and to help our guests
+and friends to find our wedding stream and other informations, but also as a remembrance for our future and, maybe, 
+our sons (if they like to code 👶💻). It is built on Angular with Bootstrap CSS, Material and some kludge 🔧
 
-## Development server
+It also integrates with an ASP.NET based API (not using it fully) called Amalgam, in which I've been working on and I will 
+(I hope I will) make it public in the not so far future.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I hope you enjoy this code and also fall in love with someone! 💞
 
-## Code scaffolding
+Com carinho,  
+Tito Silva
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+9th December 2021 (30 days before the great day)
