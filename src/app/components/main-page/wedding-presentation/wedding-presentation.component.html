@@ -17,17 +17,17 @@
     <h3 class="my-3">Te convidamos para participar deste momento tão especial de nossas vidas!</h3>
     <i class="fas fa-heart mat-primary-text"></i>
     <p class="my-3">Faremos a transmissão online da nossa cerimônia, e ficaríamos muito felizes de ter você conosco!</p>
-    <p class="mb-3">O link para a transmissão será disponibilizado nesta página no dia do casamento.</p>
-    <h2>
-        <i class="fas fa-rss mx-1 mat-primary-text"></i>
-        <i class="fas fa-tv mx-1 mat-primary-text"></i>
-    </h2>
     <h3 class="my-3 mat-primary-text">
         Será muito bom ter sua companhia neste momento!
     </h3>
-    <mat-divider class="w-75 my-3"></mat-divider>
     <div class="d-flex flex-column align-items-center w-100">
-        <a href="/locations" class="no-text-decoration mt-3 my-1 w-100">
+        <a [href]="liveLink" class="no-text-decoration mt-3 my-1 w-100">
+            <button mat-stroked-button class="w-75">
+                <mat-icon>live_tv</mat-icon>
+                Assistir cerimônia online
+            </button>
+        </a>
+        <a href="/locations" class="no-text-decoration my-1 w-100">
             <button mat-stroked-button class="w-75">
                 <mat-icon>place</mat-icon>
                 Ver local da cerimônia
@@ -36,7 +36,7 @@
         <a href="/gifts" class="no-text-decoration mb-3 my-1 w-100">
             <button mat-stroked-button class="w-75">
                 <i class="fas fa-gift"></i>
-                Visitar página de presentes
+                Ver lista de presentes
             </button>
         </a>
     </div>
@@ -58,17 +58,17 @@
     </div>
     <h3 class="my-3">Te convidamos para participar deste momento tão especial de nossas vidas!</h3>
     <p class="my-1">Faremos a transmissão online da nossa cerimônia, e ficaríamos muito felizes de ter você conosco!</p>
-    <p class="my-1 mb-3">O link para a transmissão será disponibilizado nesta página no dia do casamento.</p>
-    <h2>
-        <i class="fas fa-rss mx-1 mat-primary-text"></i>
-        <i class="fas fa-tv mx-1 mat-primary-text"></i>
-    </h2>
     <h3 class="my-3 mat-primary-text">
         Será muito bom ter sua companhia neste momento!
     </h3>
-    <mat-divider class="w-75 my-3"></mat-divider>
     <div class="d-flex flex-column align-items-center w-75">
-        <a href="/locations" class="no-text-decoration mt-3 my-1 w-100">
+        <a [href]="liveLink" class="no-text-decoration mt-3 my-1 w-100">
+            <button mat-stroked-button class="w-75">
+                <mat-icon>live_tv</mat-icon>
+                Assistir cerimônia online
+            </button>
+        </a>
+        <a href="/locations" class="no-text-decoration my-1 w-100">
             <button mat-stroked-button class="w-75">
                 <mat-icon>place</mat-icon>
                 Ver local da cerimônia
@@ -77,7 +77,7 @@
         <a href="/gifts" class="no-text-decoration mb-3 my-1 w-100">
             <button mat-stroked-button class="w-75">
                 <i class="fas fa-gift"></i>
-                Visitar página de presentes
+                Ver lista de presentes
             </button>
         </a>
     </div>

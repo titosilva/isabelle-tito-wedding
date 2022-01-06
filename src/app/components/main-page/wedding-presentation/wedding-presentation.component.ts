@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wedding-presentation.component.scss']
 })
 export class WeddingPresentationComponent implements OnInit {
+  liveLink: string = "https://youtu.be/KTFqK2rEnxw";
 
   constructor() { }
 
