@@ -30,6 +30,7 @@ import { ContactInfoDialogComponent } from './components/dialogs/contact-info-di
 import { GiftDetailsComponent } from './components/gift/gift-details/gift-details.component';
 import { NavMenuComponent } from './components/layout/nav-menu/nav-menu.component';
 import { PhotosPageComponent } from './components/photos/photos-page/photos-page.component';
+import { LocationsPageComponent } from './components/locations/locations-page/locations-page.component';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -55,7 +56,8 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     ContactInfoDialogComponent,
     GiftDetailsComponent,
     NavMenuComponent,
-    PhotosPageComponent
+    PhotosPageComponent,
+    LocationsPageComponent
   ],
   imports: [
     BrowserModule,
